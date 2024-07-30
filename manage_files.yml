@@ -1,0 +1,29 @@
+---
+- name: Manage files on managed nodes
+  hosts: all
+  become: yes
+  tasks:
+    - name: Create a directory
+      ansible.builtin.file:
+        path: /home/einfochips/Desktop/Onedrive/Training_dev  # Replace with the desired directory path
+        state: directory
+        mode: '0755'
+
+    - name: Create a file with specific content
+      ansible.builtin.copy:
+        dest: /home/einfochips/Desktop/Onedrive/Training_dev/file.txt  # Replace with the desired file path
+        content: "This is a sample file created by Ansible.\n"
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Delete a file
+      ansible.builtin.file:
+        path: /home/einfochips/Desktop/Onedrive/Training_dev/delete_file.txt  # Replace with the file path to delete
+        state: absent
+
+    - name: Modify a file (append content)
+      ansible.builtin.lineinfile:
+        path: /home/einfochips/Desktop/Onedrive/Training_dev/file.txt  # Replace with the file path
+        line: "Appended content by Ansible."
+        state: present
