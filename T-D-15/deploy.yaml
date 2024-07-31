@@ -1,0 +1,23 @@
+---
+- name: Deploy web application
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+        update_cache: yes
+
+    - name: Pull Docker image
+      docker_image:
+        name: bhavik1212/my-web-app
+        source: pull
+
+    - name: Run Docker container
+      docker_container:
+        name: web_app
+        image: bhavik1212/my-web-app
+        state: started
+        ports:
+          - "8080:8080"
