@@ -1,0 +1,56 @@
+---
+- hosts: mysql
+  become: yes
+  vars_files:
+    - vars.yml
+  vars:
+    mysql_version: 5.7
+    db_name: mydatabase
+    db_user: mydbuser
+    backup_dir: /var/backups/mysql
+
+  tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install MySQL server
+      apt:
+        name: "mysql-server-{{ mysql_version }}"
+        state: present
+
+    - name: Ensure MySQL is started and enabled
+      systemd:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Create MySQL database
+      mysql_db:
+        name: "{{ db_name }}"
+        state: present
+
+    - name: Create MySQL user
+      mysql_user:
+        name: "{{ db_user }}"
+        password: "{{ db_password }}"
+        priv: "{{ db_name }}.*:ALL"
+        state: present
+
+    - name: Create backup directory
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+        owner: mysql
+        group: mysql
+        mode: '0755'
+
+    - name: Set up cron job for database backup
+      cron:
+        name: "MySQL database backup"
+        user: root
+        job: "mysqldump -u {{ db_user }} -p{{ db_password }} {{ db_name }} > {{ backup_dir }}/{{ db_name }}_backup_$(date +\\%F).sql"
+        minute: "0"
+        hour: "2"
+

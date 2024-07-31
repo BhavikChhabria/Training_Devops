@@ -1,0 +1,22 @@
+---
+- name: Configure and restart nginx service
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure nginx is installed
+      ansible.builtin.package:
+        name: nginx
+        state: present
+
+    - name: Deploy nginx configuration file
+      ansible.builtin.copy:
+        src: /home/einfochips/Desktop/Onedrive/Training_dev/nginx.conf  # Replace with the path to your local nginx.conf file
+        dest: /etc/nginx/nginx.conf
+        owner: root
+        group: root
+        mode: '0644'
+
+    - name: Restart nginx service
+      ansible.builtin.service:
+        name: nginx
+        state: restarted
