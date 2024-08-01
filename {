@@ -1,0 +1,130 @@
+Script started on 2024-08-01 09:04:03+05:30 [TERM="xterm-256color" TTY="/dev/pts/6" COLUMNS="144" LINES="36"]
+                    echo "Deploying to environment"
+                    echo "${GREETING}"
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'This will always run'
+        }
+        success {
+            echo 'This will run only if successful'
+        }
+        failure {
+            echo 'This will run only if failed'
+        }
+    }
+}
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$                     echo "Deploying to environment"
+Deploying to environment
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$                     echo "${GREETING}"
+
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$                 }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$             }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$     }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ 
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$     post {
+
+Command 'post' not found, did you mean:
+
+  command 'gost' from snap gost (2.11.5)
+  command 'port' from snap port (1.10.0)
+  command 'gost' from deb gost (0.1.0+git20181204.5afeda5e-1)
+  command 'epost' from deb ncbi-entrez-direct (12.0.20190816+ds-1ubuntu0.2)
+  command 'posh' from deb posh (0.13.2)
+  command 'spost' from deb mmh (0.4-2)
+  command 'most' from deb most (5.0.0a-4)
+  command 'mpost' from deb texlive-binaries (2019.20190605.51237-3ubuntu0.2)
+  command 'psst' from deb psst (0.1-11)
+  command 'poet' from deb libpoet-perl (0.16-1)
+  command 'host' from deb bind9-host (1:9.18.28-0ubuntu0.20.04.1)
+  command 'rpost' from deb suck (4.3.4-1)
+
+See 'snap info <snapname>' for additional versions.
+
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         always {
+always: command not found
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$             echo 'This will always run'
+This will always run
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         success {
+^C]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ gedit Jenkinsfile 
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git branch
+[?1h=* [32mproduction[m[m
+[K[?1l>]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git add Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ it [K[K[Kgit commit -m "file ade[Kded"
+[production f4a3d7a] file added
+ 1 file changed, 45 insertions(+)
+ create mode 100644 Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git push origin development
+error: src refspec development does not match any
+[31merror: failed to push some refs to 'https://github.com/bha1212002/Training_Devops.git'
+[m]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git push origin production [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit branch
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git git branch[1P branch[1P branch[1P branch[1Pbranch
+[?1h=* [32mproduction[m[m
+[K[?1l>]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git checkout development
+error: pathspec 'development' did not match any file(s) known to git
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ ll
+total 28
+drwxrwxr-x 4 einfochips einfochips 4096 Aug  1 09:04  [0m[01;34m.[0m/
+drwxrwxr-x 3 einfochips einfochips 4096 Aug  1 08:40  [01;34m..[0m/
+-rw-rw-r-- 1 einfochips einfochips 8192 Aug  1 09:04 '{'
+drwxrwxr-x 8 einfochips einfochips 4096 Aug  1 09:06  [01;34m.git[0m/
+drwxrwxr-x 3 einfochips einfochips 4096 Aug  1 08:48  [01;34mHelloWorld[0m/
+-rw-rw-r-- 1 einfochips einfochips 1087 Aug  1 09:04  Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ rm .git/[K[K[K[K[K[K[K[Kgit[K[K[Kgit checkout -b development
+Switched to a new branch 'development'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git branch
+[?1h=* [32mdevelopment[m[m
+  production[m[m
+[K[?1l>]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ touch Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ nano Jenkinsfile 
+[?2004h[?1neDrive/Training_dev/T-D-13/MultiBranchProject[00m$         always {
+always: command not found
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$             echo 'This will always run'
+This will always run
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         }
+bash: syntax error near unexpected token `}'
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$         success {
+^C]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ gedit Jenkinsfile 
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git branch
+[?1h=* [32mproduction[m[m
+[K[?1l>]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git add Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ it [K[K[Kgit commit -m "file ade[Kded"
+[production f4a3d7a] file added
+ 1 file changed, 45 insertions(+)
+ create mode 100644 Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git push origin development
+error: src refspec development does not match any
+[31merror: failed to push some refs to 'https://github.com/bha1212002/Training_Devops.git'
+[m]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git push origin production [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kgit branch
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git git branch[1P branch[1P branch[1P branch[1Pbranch
+[?1h=* [32mproduction[m[m
+[K[?1l>]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ git checkout development
+error: pathspec 'development' did not match any file(s) known to git
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ ll
+total 28
+drwxrwxr-x 4 einfochips einfochips 4096 Aug  1 09:04  [0m[01;34m.[0m/
+drwxrwxr-x 3 einfochips einfochips 4096 Aug  1 08:40  [01;34m..[0m/
+-rw-rw-r-- 1 einfochips einfochips 8192 Aug  1 09:04 '{'
+drwxrwxr-x 8 einfochips einfochips 4096 Aug  1 09:06  [01;34m.git[0m/
+drwxrwxr-x 3 einfochips einfochips 4096 Aug  1 08:48  [01;34mHelloWorld[0m/
+-rw-rw-r-- 1 einfochips einfochips 1087 Aug  1 09:04  Jenkinsfile
+]0;einfochips@AHMLPT2584: ~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[01;32meinfochips@AHMLPT2584[00m:[01;34m~/Desktop/OneDrive/Training_dev/T-D-13/MultiBranchProject[00m$ rm .git/[K[K[K[K[K[K[K[K
