@@ -1,0 +1,57 @@
+# deploy_postgresql.yml
+---
+- hosts: postgresql
+  become: yes
+  vars_files:
+    - vars.yml
+  vars:
+    postgres_version: 12
+    db_name: mydatabase
+    db_user: mydbuser
+    backup_dir: /var/backups/postgresql
+
+  tasks:
+    - name: Update and upgrade apt packages
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Install PostgreSQL
+      apt:
+        name: "postgresql-{{ postgres_version }}"
+        state: present
+
+    - name: Ensure PostgreSQL is started and enabled
+      systemd:
+        name: postgresql
+        state: started
+        enabled: yes
+
+    - name: Create PostgreSQL database
+      postgresql_db:
+        name: "{{ db_name }}"
+        state: present
+
+    - name: Create PostgreSQL user
+      postgresql_user:
+        name: "{{ db_user }}"
+        password: "{{ db_password }}"
+        priv: "{{ db_name }}:ALL"
+        state: present
+
+    - name: Create backup directory
+      file:
+        path: "{{ backup_dir }}"
+        state: directory
+        owner: postgres
+        group: postgres
+        mode: '0755'
+
+    - name: Set up cron job for database backup
+      cron:
+        name: "PostgreSQL database backup"
+        user: postgres
+        job: "pg_dump {{ db_name }} > {{ backup_dir }}/{{ db_name }}_backup_$(date +\\%F).sql"
+        minute: "0"
+        hour: "2"
+
