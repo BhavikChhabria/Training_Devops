@@ -1,0 +1,9 @@
+---
+- name: Install a specific package
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure a specific package is installed
+      ansible.builtin.package:
+        name: <package_name>  # Replace <package_name> with the desired package name
+        state: present
