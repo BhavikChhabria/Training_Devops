@@ -1,0 +1,17 @@
+# MySQL variables
+mysql_root_password: "root_password"
+mysql_databases:
+  - name: app_db
+mysql_users:
+  - name: app_user
+    password: "app_password"
+    priv: "app_db.*:ALL"
+
+# Node.js variables
+nodejs_version: "14.x"
+
+# Nginx variables
+nginx_vhosts:
+  - server_name: "frontend.example.com"
+    root: "/var/www/html"
+    index: "index.html"

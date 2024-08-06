@@ -1,0 +1,36 @@
+---
+- name: Install Node.js
+  apt:
+    name:
+      - nodejs
+      - npm
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Ensure Node.js and npm are up to date
+  command: npm install -g npm@latest
+  become: yes
+
+- name: Copy application code
+  copy:
+    src: /home/ubuntu/.ansible/tmp/
+    dest: /opt/app/
+    remote_src: yes
+    owner: www-data
+    group: www-data
+    mode: '0755'
+  become: yes
+
+- name: Install app dependencies
+  npm:
+    path: /opt/app/
+    state: present
+  become: yes
+
+- name: Start the Node.js application
+  command: npm start
+  args:
+    chdir: /opt/app/
+  become: yes
+

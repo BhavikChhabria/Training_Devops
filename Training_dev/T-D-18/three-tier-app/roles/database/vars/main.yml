@@ -1,0 +1,13 @@
+---
+# vars file for roles/database
+
+# Database configuration
+mysql_root_password: "{{ mysql_root_password | default('root_password') }}"
+app_db_name: "{{ app_db_name | default('default_db_name') }}"
+app_db_user: "{{ app_db_user | default('default_db_user') }}"
+app_db_user_password: "{{ app_db_user_password | default('default_db_password') }}"
+
+# Other MySQL configuration variables
+mysql_bind_address: '0.0.0.0'
+mysql_port: 3306
+

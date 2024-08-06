@@ -1,0 +1,24 @@
+---
+# tasks file for database
+
+- name: Install MySQL server
+  apt:
+    name: mysql-server
+    state: present
+  become: yes
+
+- name: Ensure MySQL service is running and enabled
+  service:
+    name: mysql
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Set up MySQL root user password
+  mysql_user:
+    name: root
+    password: "securepassword"
+    host_all: true
+    state: present
+  become: yes
+

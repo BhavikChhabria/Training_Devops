@@ -1,0 +1,10 @@
+mysql_root_password: ""  # Default is an empty password; set it as needed
+mysql_bind_address: "127.0.0.1"  # Default to localhost
+
+app_db_name: "my_database"  # Default application database name
+app_db_user: "app_user"     # Default application user
+app_db_user_password: "app_password"  # Default application user password
+
+mysql_package: "mysql-server"  # Package name for MySQL server
+mysql_service_name: "mysql"    # Name of the MySQL service
+

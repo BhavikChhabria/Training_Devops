@@ -1,0 +1,23 @@
+---
+- name: Test three-tier web application deployment
+  hosts: all
+  become: yes
+
+  tasks:
+    - name: Ensure Nginx is running
+      service:
+        name: nginx
+        state: started
+      when: "inventory_hostname in groups['frontend']"
+
+    - name: Ensure Node.js application is running
+      command: pm2 status
+      register: pm2_status
+      changed_when: false
+      when: "inventory_hostname in groups['backend']"
+
+    - name: Ensure MySQL is running
+      service:
+        name: mysql
+        state: started
+      when: "inventory_hostname in groups['database']"

@@ -1,0 +1,41 @@
+---
+- name: Install and configure MySQL
+  hosts: mysql
+  become: yes
+  vars:
+    mysql_root_password: "root"  # Set your root password
+    app_db_name: "test_db"  # Application database name
+    app_db_user: "db_user"     # Application user
+    app_db_user_password: "testpass"  # Application user password
+
+  roles:
+    - role: database
+      vars:
+        mysql_root_password: "{{ mysql_root_password }}"
+        app_db_name: "{{ app_db_name }}"
+        app_db_user: "{{ app_db_user }}"
+        app_db_user_password: "{{ app_db_user_password }}"
+
+- name: Deploy Three-Tier Application
+  hosts: all
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/bin/python3
+    app_db_name: "{{ app_db_name | default('default_db_name') }}"
+    app_db_user: "{{ app_db_user | default('default_db_user') }}"
+    app_db_user_password: "{{ app_db_user_password | default('default_db_password') }}"
+
+  collections:
+    - community.mysql
+
+  tasks:
+    - name: Deploy Frontend
+      import_role:
+        name: frontend
+      when: "'nginx' in group_names"
+
+    - name: Deploy Backend
+      import_role:
+        name: backend
+      when: "'nodejs' in group_names"
+

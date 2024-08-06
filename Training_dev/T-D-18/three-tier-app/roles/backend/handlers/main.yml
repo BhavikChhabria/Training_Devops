@@ -1,0 +1,7 @@
+---
+- name: restart nodejs
+  systemd:
+    name: nodejs
+    state: restarted
+  become: yes
+
